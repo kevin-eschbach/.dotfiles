@@ -1,5 +1,5 @@
-# .dotfiles-win
-My dotfiles repo for Windows machines
+# .dotfiles
+My personal dotfiles. Do what the fuck you want with it.
 
 <a href="http://www.wtfpl.net/"><img
        src="http://www.wtfpl.net/wp-content/uploads/2012/12/wtfpl-badge-4.png"
