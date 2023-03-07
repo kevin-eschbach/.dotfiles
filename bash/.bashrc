@@ -4,6 +4,8 @@ alias ..='cd ..'
 alias ...='cd ../..'
 alias ....='cd ../../..'
 
+alias update_dotfiles='cd ~/.dotfiles-win && git pull && ./install/install.sh'
+
 alias ls='ls --color=always'
 alias ld='ls -ld'
 alias la='ls -Alh'
@@ -34,6 +36,7 @@ export EDITOR=nvim
 export VISUAL=nvim
 
 ## Amazing command prompt
+shopt -s checkwinsize
 export GIT_PS1_SHOWDIRTYSTATE=1
 alias cpu="grep 'cpu ' /proc/stat | awk '{usage=(\$2+\$4)*100/(\$2+\$4+\$5)} END {print usage}' | awk '{printf(\"%.1f\n\", \$1)}'"
 function __setprompt
