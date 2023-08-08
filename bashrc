@@ -1,15 +1,17 @@
-## Aliases
+# Aliases
 alias home='cd ~'
 alias ..='cd ..'
 alias ...='cd ../..'
 alias ....='cd ../../..'
 
-alias update_dotfiles='cd ~/.dotfiles-win && git pull && ./install/install.sh'
+#alias update_dotfiles='cd ~/.dotfiles-win && git pull && ./install/install.sh'
 
 alias ls='ls --color=always'
 alias ld='ls -ld'
 alias la='ls -Alh'
 alias ll='ls -l'
+alias update='sudo apt-get update && sudo apt-get upgrade'
+alias clean='sudo apt-get autoclean && sudo apt-get autoremove'
 
 ## Git Aliases
 alias gc='git commit'
