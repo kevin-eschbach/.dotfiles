@@ -1,4 +1,0 @@
-zsh Installed
-NeoVim Installed
-curl Installed
-unzip installed

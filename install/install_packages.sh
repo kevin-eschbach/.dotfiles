@@ -30,4 +30,18 @@ else
 	echo "unzipf failed to install" >> $log_file
 fi
 
+sudo apt-get -y install ripgrep
+if type -p ripgrep > /dev/null; then
+	echo "ripgrep installed" >> $log_file
+else
+	echo "ripgrep failed to install" >> $log_file
+fi
+
+sudo apt-get -y install build-essential
+if type -p build-essential > /dev/null; then
+	echo "build-essential installed" >> $log_file
+else
+	echo "build-essential failed to install" >> $log_file
+fi
+
 curl -fsSl https://fnm.vercel.app/install | bash
