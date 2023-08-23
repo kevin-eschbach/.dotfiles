@@ -1,2 +1,1 @@
 require("eshy")
-print("Hello")
