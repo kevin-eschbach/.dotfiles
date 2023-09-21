@@ -1,4 +1,4 @@
-local lsp = require('lsp-zero')
+local lsp = require('lsp-zero').preset({})
 
 lsp.preset("recommended")
 
@@ -31,7 +31,7 @@ lsp.ensure_installed({
 'cssls',
 'marksman',
 'rust_analyzer',
-'pyright'
+'pylsp'
 })
 
 lsp.setup()
