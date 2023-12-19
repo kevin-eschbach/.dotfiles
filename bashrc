@@ -100,6 +100,7 @@ alias home='cd ~'
 alias ..='cd ..'
 alias ...='cd ../..'
 alias ....='cd ../../..'
+alias keyboard='setxkbmap'
 
 #alias update_dotfiles='cd ~/.dotfiles-win && git pull && ./install/install.sh'
 
@@ -114,6 +115,9 @@ alias la='ls -Alh'
 alias ll='ls -l'
 alias update='sudo apt-get update && sudo apt-get upgrade'
 alias clean='sudo apt-get autoclean && sudo apt-get autoremove'
+
+# conda
+alias condastart='eval "$(~/miniconda3/bin/conda shell.bash hook)"'
 
 ## Git Aliases
 alias gc='git commit'

@@ -12,8 +12,7 @@ general {
 order += "load"
 order += "cpu_temperature 0"
 order += "disk /"
-order += "ethernet enp1s0"
-order += "wireless wlp2s0"
+order += "wireless wlo1"
 order += "volume master"
 order += "battery 1"
 order += "tztime local"
@@ -31,12 +30,8 @@ disk "/" {
         format = "<span background='#fec7cd'> %free Free </span>"
 }
 
-ethernet enp1s0 {
-        format_up = "<span background='#88c0d0'> LAN %ip </span>"
-        format_down = "<span background='#88c0d0'> LAN Disconnected </span>"
-}
 
-wireless wlp2s0 {
+wireless wlo1 {
         format_up = "<span background='#b48ead'> WLAN %essid </span>"
         format_down = "<span background='#b48ead'> WLAN Disconnected </span>"
 }
