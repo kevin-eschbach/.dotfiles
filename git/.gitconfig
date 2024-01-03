@@ -12,3 +12,6 @@
 [user]
 	name = Kevin Eschbach
 	email = 64735549+kevin-eschbach@users.noreply.github.com
+[core]
+	autocrlf = true
+	whitespace = cr-at-eol
