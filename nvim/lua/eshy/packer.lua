@@ -12,7 +12,7 @@ return require('packer').startup(function(use)
 		-- or                          , branch = '0.1.x',
 		requires = { {'nvim-lua/plenary.nvim'} }
 	}
-	use ({ 
+	use ({
 		"bluz71/vim-nightfly-colors", as = "nightfly",
 		config = function()
 			vim.cmd('colorscheme nightfly')
@@ -36,6 +36,4 @@ return require('packer').startup(function(use)
 			{'L3MON4D3/LuaSnip'},     -- Required
 		}
 	}
-
-    use 'github/copilot.vim'
 end)
