@@ -9,7 +9,8 @@ font pango: Noto DeJaVu Mono 10
 floating_modifier $alt
 
 # autostart
-exec --no-startup-id hsetroot -center ~/Downloads/wp_night_city.png  # set wallpaper
+# exec --no-startup-id hsetroot -center ~/Downloads/wp_night_city.png  # set wallpaper
+exec_always --no-startup-id hsetroot -solid "#252525"
 exec --no-startup-id compton -b  # compositor for transparency
 
 # start a terminal on alt+enter
@@ -44,8 +45,8 @@ bindsym $alt+f fullscreen toggle
 # change container layout split
 bindsym $alt+Shift+s layout toggle split
 
-bindsym $alt+o exec "obsidian"
-bindsym $alt+b exec "brave-browser"
+bindsym $alt+o exec obsidian
+bindsym $alt+b exec brave-browser
 
 # toggle tiling / floating
 bindsym $alt+space floating toggle
