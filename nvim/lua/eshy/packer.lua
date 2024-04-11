@@ -36,4 +36,31 @@ return require('packer').startup(function(use)
 			{'L3MON4D3/LuaSnip'},     -- Required
 		}
 	}
+
+    use {
+        "epwalsh/obsidian.nvim",
+        tag = "*",  -- recommended, use latest release instead of latest commit
+        requires = {
+            -- Required.
+            "nvim-lua/plenary.nvim",
+
+            -- see below for full list of optional dependencies
+        },
+        config = function()
+            require("obsidian").setup({
+                workspaces = {
+                    {
+                        name = "personal",
+                        path = "/media/eshy/KevinEschbach/w1n7ermu7e",
+                    },
+                },
+                --place more options here 
+                ui = {
+                    enable = false,
+                },
+            })
+        end,
+    }
+
 end)
+
