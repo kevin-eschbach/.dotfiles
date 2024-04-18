@@ -6,12 +6,12 @@
     status = true
 [color "status"]
     added = green
-    changed = red
+    changed = red 
     deleted = red
     untracked = yellow
 [user]
 	name = Kevin Eschbach
 	email = 64735549+kevin-eschbach@users.noreply.github.com
 [core]
-	autocrlf = true
+	autocrlf = false 
 	whitespace = cr-at-eol
