@@ -12,12 +12,11 @@ return require('packer').startup(function(use)
 		-- or                          , branch = '0.1.x',
 		requires = { {'nvim-lua/plenary.nvim'} }
 	}
-	use ({
-		"bluz71/vim-nightfly-colors", as = "nightfly",
-		config = function()
-			vim.cmd('colorscheme nightfly')
-		end
-	})
+
+    -- colorschemes
+	use ({"bluz71/vim-nightfly-colors"})
+    use({"ray-x/aurora"})
+    use({"morhetz/gruvbox"})
 
 	use('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
 
@@ -43,18 +42,15 @@ return require('packer').startup(function(use)
         requires = {
             -- Required.
             "nvim-lua/plenary.nvim",
-
-            -- see below for full list of optional dependencies
         },
         config = function()
             require("obsidian").setup({
                 workspaces = {
                     {
                         name = "personal",
-                        path = "/media/eshy/KevinEschbach/w1n7ermu7e",
+                        path = "~/vaults/personal",
                     },
                 },
-                --place more options here 
                 ui = {
                     enable = false,
                 },

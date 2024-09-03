@@ -18,7 +18,7 @@ order += "battery 1"
 order += "tztime local"
 
 load {
-        format = "<span background='#a3be8c'> %5min Load </span>"
+        format = "<span background='#a3be8c'> CPU %5min%</span>"
 }
 
 cpu_temperature 0 {

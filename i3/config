@@ -8,21 +8,25 @@ font pango: Noto DeJaVu Mono 10
 # Use Mouse+$alt to drag floating windows to their wanted position
 floating_modifier $alt
 
+# No Borders
+for_window [class="^.*"] border pixel 1
+                         # class        border  backgr   text    indic  child_brdr
+for_window [class="^.*"] client.focused   #ffffff #ffffff #ffffff #ffffff #ffffff 
+
 # autostart
-# exec --no-startup-id hsetroot -center ~/Downloads/wp_night_city.png  # set wallpaper
-exec_always --no-startup-id hsetroot -solid "#252525"
+exec --no-startup-id hsetroot -center ~/Downloads/wp_dune.jpeg  # set wallpaper
+# exec_always --no-startup-id hsetroot -solid "#252525"
 exec --no-startup-id compton -b  # compositor for transparency
 
 # start a terminal on alt+enter
-bindsym $alt+Return exec i3-sensible-terminal
+bindsym $alt+Return exec kitty 
 
 # start dmenu (a program launcher)
-bindsym $alt+Shift+d exec i3-dmenu-desktop --dmenu="dmenu -i -fn 'Noto Sans:size=8'"
-bindsym $alt+d exec rofi -lines 12 -padding 18 -width 60 -location 0 -show drun -sidebar-mode -columns 3 -font 'Noto Sans 8'
+bindsym $alt+Shift+d exec i3-dmenu-desktop --dmenu="dmenu -i -fn 'Noto DeJaVu Mono:size=12'"
+bindsym $alt+d exec rofi -lines 12 -padding 18 -width 60 -location 0 -show drun -sidebar-mode -columns 3 -font 'Noto DeJaVu Mono 12'
 
 # lock screen 
-bindsym $home+l exec i3lock -c 2f343f -i ~/Downloads/wp_night_city.png
-
+bindsym $home+l exec i3lock -c 0f0f0f -f
 # kill focused window
 bindsym $alt+q kill
 
@@ -45,8 +49,7 @@ bindsym $alt+f fullscreen toggle
 # change container layout split
 bindsym $alt+Shift+s layout toggle split
 
-bindsym $alt+o exec obsidian
-bindsym $alt+b exec brave-browser
+bindsym $alt+b exec firefox 
 
 # toggle tiling / floating
 bindsym $alt+space floating toggle
@@ -97,7 +100,6 @@ bar {
         background #2f343f
         statusline #2f343f
         separator #4b5262
-
         # colour of border, background, and text
         focused_workspace       #2f343f #bf616a #d8dee8
         active_workspace        #2f343f #2f343f #d8dee8
