@@ -20,7 +20,6 @@ alias ll='ls -l'
 alias update='sudo apt-get update && sudo apt-get upgrade -y'
 alias clean='sudo apt-get autoclean && sudo apt-get autoremove -y'
 
-alias top='htop'
 
 alias fman="compgen -c | fzf | xargs man"
 
