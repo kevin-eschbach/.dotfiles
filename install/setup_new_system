@@ -1,0 +1,39 @@
+#!/usr/bin/env bash
+
+# update packages and clean system
+sudo apt update
+sudo apt upgrade -y
+sudo apt autoremove --purge -y
+
+sudo apt install build-essential -y
+sudo apt install cmake -y
+sudo apt install git -y
+sudo apt install wget -y
+sudo apt install fzf -y
+sudo apt install curl -y
+sudo apt install ffmpeg -y
+sudo apt install rofi -y
+sudo apt install compton -y
+sudo apt install remmina -y
+sudo apt install tldr -y
+sudo apt install wikiman -y
+sudo apt install vlc -y
+sudo apt install python3-pip -y
+
+update_nvim
+
+source ./install_i3
+source ./update_dotfiles
+
+sudo apt update
+sudo apt install --fix-missing -y
+sudo apt upgrade --allow-downgrades -y
+sudo apt full-upgrade --allow-downgrades -y
+
+sudo apt install -f
+sudo apt autoremove -y
+sudo apt clean
+
+echo "Your system is now ready!"
+
+exit 0

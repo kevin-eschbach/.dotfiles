@@ -1,4 +1,43 @@
 #!/usr/bin/env bash
-echo $1 | lolcat
-timer $2
-spd-say "'$1' session done"
+########
+# HELP #
+########
+Help(){
+    echo "Description"
+    echo
+    echo "pomo [-h|n|t]"
+    echo "options:"
+    echo "-h    display this help message"
+    echo "-n    set name of the session. default to 'pomo'"
+    echo "-t    set duraton of the session. default to 5m"
+    echo
+}
+
+while getopts ":hn:t:" option; do
+    case $option in
+        h) # display help
+            Help
+            exit;;
+        n)
+            Name=$OPTARG;;
+        t)
+            Time=$OPTARG;;
+        \?)
+            echo "ERROR: invalid option"
+            exit;;
+    esac
+done
+
+if [ -z "$Name" ]; then
+    Name="pomo"
+fi; 
+
+if [ -z "$Time" ]; then
+    Time="5m"
+fi
+
+echo $Name | lolcat
+timer $Time
+spd-say "'$Name' session done"
+
+exit 0
