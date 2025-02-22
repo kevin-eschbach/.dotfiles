@@ -14,7 +14,7 @@ for_window [class="^.*"] border pixel 1
 for_window [class="^.*"] client.focused   #ffffff #ffffff #ffffff #ffffff #ffffff 
 
 # autostart
-exec --no-startup-id hsetroot -center ~/Downloads/wp_dune.jpeg  # set wallpaper
+exec --no-startup-id hsetroot -center ~/Downloads/ak_gandalf.jpg  # set wallpaper
 # exec_always --no-startup-id hsetroot -solid "#252525"
 exec --no-startup-id compton -b  # compositor for transparency
 

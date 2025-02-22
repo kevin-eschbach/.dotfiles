@@ -6,7 +6,6 @@ alias home='cd ~'
 alias ..='cd ..'
 alias ...='cd ../..'
 alias ....='cd ../../..'
-alias keyboard='setxkbmap'
 
 alias ls='ls --color=auto'
 alias dir='dir --color=auto'

@@ -1,1 +1,16 @@
 bind -x '"\C-f":"tmux"'
+
+set colored-stats on
+set completion-ignore-case on
+set completion-prefix-display-length 6 
+set mark-symlinked-directories on
+set show-all-if-ambiguous on
+set show-all-if-unmodified on
+set visible-stats on 
+set page-completions off
+set completion-query-items 100
+set match-hidden-files off
+set skip-completed-text on
+set input-meta on
+set output-meta on
+set convert-meta off
