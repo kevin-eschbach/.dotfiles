@@ -1,5 +1,3 @@
-bind -x '"\C-f":"tmux"'
-
 set colored-stats on
 set completion-ignore-case on
 set completion-prefix-display-length 6 

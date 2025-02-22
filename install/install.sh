@@ -19,9 +19,8 @@ sudo rm -f $HOME/.inputrc > /dev/null 2>&1
 sudo rm -f $HOME/.config/rofi/config.rasi 2>&1
 
 ## Create symlinks
-echo "Creating symlinks..."
 ln -sf $dotfiles_dir/.bashrc $HOME/.bashrc
-ln -sf $dotfiles_dir/nvim $HOME/.config/nvim
+ln -sf $dotfiles_dir/nvim_new $HOME/.config/nvim
 ln -sf $dotfiles_dir/git/.gitconfig $HOME/.gitconfig
 ln -sf $dotfiles_dir/i3 $HOME/.config/i3
 ln -sf $dotfiles_dir/i3status $HOME/.config/i3status

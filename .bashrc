@@ -51,8 +51,8 @@ if [ -f $DOTFILES/.bash_aliases ]; then
 fi
 
 # Key bindings 
-if [ -f $DOTFILES/inputrc ]; then
-    . $DOTFILES/inputrc 
+if [ -f $DOTFILES/keybindings ]; then
+    . $DOTFILES/keybindings 
 fi
 
 # Use the following command to enable programmable completion features:
@@ -106,6 +106,7 @@ export GEM_HOME="$HOME/gems"
 export PATH=$PATH:/usr/local/go/bin  # Go
 export PATH="$HOME/gems/bin:$PATH"  # Ruby
 export PATH="$SCRIPTS/bin:$PATH"  # Scripts
+export PATH="$HOME/bin:$PATH"
 
 # nvim as manpager
 export MANPAGER="nvim +Man!"
