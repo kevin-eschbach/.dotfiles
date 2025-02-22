@@ -1,6 +1,5 @@
 export DOTFILES="$HOME/.dotfiles"
-# nvim
-export PATH="$HOME/personal/neovim:$PATH"
+source $DOTFILES/exports
 # If not running interactively, don't do anything
 case $- in
     *i*) ;;

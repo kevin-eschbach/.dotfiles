@@ -1,0 +1,33 @@
+#!/usr/bin/env bash
+if [ -d "$HOME/personal/kitty" ]; then
+    echo "kitty already cloned"
+else
+    git clone https://github.com/kovidgoyal/kitty.git $HOME/personal/kitty
+fi
+
+sudo apt install uuid-dev -y
+sudo apt install libgl1-mesa-dev libglu1-mesa-dev -y
+sudo apt install libx11-dev libxcb-xkb-dev libxcb-icccm4-dev libxcb-image0-dev libxcb-keysyms1-dev libxcb-render-util0-dev libxcb-xinerama0-dev libxcb-xinput-dev libxcb-xfixes0-dev libx11-xcb-dev -y
+sudo apt install libxrandr-dev libxcursor-dev libxinerama-dev libxkbcommon-dev -y
+sudo apt install libdbus-1-dev -y
+sudo apt install libfontconfig1-dev -y
+sudo apt install libfreetype6-dev -y
+sudo apt install libharfbuzz-dev -y
+sudo apt install libpng-dev libjpeg-dev -y
+sudo apt install libxi-dev -y
+
+cd $HOME/personal/kitty
+git fetch
+git checkout v0.39.1
+
+./dev.sh build
+
+if [ -f "$HOME/.local/bin/kitty" ]; then
+    sudo rm $HOME/.local/bin/kitty
+fi
+
+if [ -f "$HOME/.local/bin/kitten" ]; then
+    sudo rm $HOME/.local/bin/kitten
+fi
+sudo ln -s $HOME/personal/kitty/kitty/launcher/kitty $HOME/.local/bin/kitty
+sudo ln -s $HOME/personal/kitty/kitty/launcher/kitten $HOME/.local/bin/kitten

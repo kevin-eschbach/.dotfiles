@@ -1,0 +1,4 @@
+# nvim
+export PATH="$HOME/personal/neovim:$PATH"
+# kitty
+export PATH="$HOME/personal/kitty/kitty/launcher:$PATH"

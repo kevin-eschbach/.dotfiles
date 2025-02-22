@@ -20,8 +20,9 @@ sudo apt install wikiman -y
 sudo apt install vlc -y
 sudo apt install python3-pip -y
 
-update_nvim
-
+source ./update_go
+source ./update_kitty
+source ./update_nvim
 source ./install_i3
 source ./update_dotfiles
 

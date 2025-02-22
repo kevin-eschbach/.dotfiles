@@ -10,5 +10,3 @@ git fetch
 git checkout v0.10.4
 make CMAKE_BUILD_TYPE=RelWithDebInfo
 sudo make install
-
-exit 0
