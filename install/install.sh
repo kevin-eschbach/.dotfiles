@@ -16,6 +16,7 @@ sudo rm -f $HOME/.config/compton.conf > /dev/null 2>&1
 sudo rm -f $HOME/.tmux.conf > /dev/null 2>&1
 sudo rm -f $HOME/.config/kitty/kitty.conf > /dev/null 2>&1
 sudo rm -f $HOME/.inputrc > /dev/null 2>&1
+sudo rm -f $HOME/.config/rofi/config.rasi 2>&1
 
 ## Create symlinks
 echo "Creating symlinks..."
@@ -28,3 +29,4 @@ ln -sf $dotfiles_dir/compton/compton.conf $HOME/.config/compton.conf
 ln -sf $dotfiles_dir/tmux/.tmux.conf $HOME/.tmux.conf
 ln -sf $dotfiles_dir/kitty/kitty.conf $HOME/.config/kitty/kitty.conf
 ln -sf $dotfiles_dir/inputrc $HOME/.inputrc
+ln -sf $dotfiles_dir/rofi/config.rasi $HOME/.config/rofi/config.rasi
