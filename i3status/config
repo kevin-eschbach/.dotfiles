@@ -9,13 +9,13 @@ general {
 		color_bad = '#ba5e57'
 }
 
+order += "time"
 order += "load"
 order += "cpu_temperature 0"
 order += "disk /"
 order += "wireless wlo1"
 order += "volume master"
 order += "battery 1"
-order += "tztime local"
 
 load {
         format = "<span background='#a3be8c'> CPU %5min%</span>"
@@ -56,7 +56,6 @@ battery 1 {
         low_threshold = 10
 }
 
-tztime local {
-		format = "<span background='#a3be8c'> %time </span>"
-		format_time = "%Y-%m-%d %H:%M"
+time {
+        format = "<span foreground='#ffffff'>time: %H:%M %Z</span>" 
 }
