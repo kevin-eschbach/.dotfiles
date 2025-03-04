@@ -22,13 +22,19 @@ sudo apt install vlc -y
 sudo apt install thunderbird -y
 sudo apt install python3-pip -y
 
+cd $HOME/.dotfiles/install
 source ./update_go
+cd $HOME/.dotfiles/install
 source ./update_kitty
-cd $HOME/.dotfiles
+cd $HOME/.dotfiles/install
 source ./update_nvim
-cd $HOME/.dotfiles
+cd $HOME/.dotfiles/install
 source ./install_i3
+cd $HOME/.dotfiles/install
 source ./update_dotfiles
+cd $HOME/.dotfiles/install
+
+
 
 sudo apt update
 sudo apt install --fix-missing -y
