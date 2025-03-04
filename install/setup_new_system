@@ -24,7 +24,9 @@ sudo apt install python3-pip -y
 
 source ./update_go
 source ./update_kitty
+cd $HOME/.dotfiles
 source ./update_nvim
+cd $HOME/.dotfiles
 source ./install_i3
 source ./update_dotfiles
 
