@@ -3,7 +3,7 @@ set $alt Mod1
 set $home Mod4
 
 # set font
-font pango: Noto DeJaVu Mono 10
+font pango: Noto DeJaVu Mono 16 
 
 # Use Mouse+$alt to drag floating windows to their wanted position
 floating_modifier $alt
@@ -17,6 +17,7 @@ for_window [class="^.*"] client.focused   #ffffff #ffffff #ffffff #ffffff #fffff
 exec --no-startup-id hsetroot -center ~/Downloads/ak_gandalf.jpg  # set wallpaper
 # exec_always --no-startup-id hsetroot -solid "#252525"
 exec --no-startup-id compton -b  # compositor for transparency
+exec setxkbmap us
 
 # start a terminal on alt+enter
 bindsym $alt+Return exec kitty 
@@ -25,13 +26,16 @@ bindsym $alt+Return exec kitty
 bindsym $alt+x exec xrandr --output DP-1 --off && xrandr --output DP-1 --auto
 
 # start dmenu (a program launcher)
-bindsym $alt+Shift+d exec i3-dmenu-desktop --dmenu="dmenu -i -fn 'Noto DeJaVu Mono:size=12'"
-bindsym $alt+d exec rofi -lines 12 -padding 18 -width 60 -location 0 -show drun -sidebar-mode -columns 3 -font 'Noto DeJaVu Mono 12'
+bindsym $alt+d exec rofi -lines 12 -padding 18 -width 60 -location 0 -show drun -sidebar-mode -columns 3 -font 'Noto DeJaVu Mono 16'
 
 # lock screen 
 bindsym $home+l exec i3lock -c 0f0f0f -f
 # kill focused window
 bindsym $alt+q kill
+
+# toggle keyboard layout
+bindsym $alt+t exec (setxkbmap -query | grep -q 'variant:\s\+intl') && setxkbmap -layout us || setxkbmap -layout us -variant intl
+ 
 
 # change focus
 bindsym $alt+h focus left
@@ -51,11 +55,6 @@ bindsym $alt+f fullscreen toggle
 
 # change container layout split
 bindsym $alt+Shift+s layout toggle split
-
-bindsym $alt+b exec firefox 
-
-# toggle tiling / floating
-bindsym $alt+space floating toggle
 
 # switch to workspace
 bindsym $alt+1 workspace 1
@@ -83,7 +82,7 @@ bindsym $alt+Shift+9 move container to workspace 9
 bindsym $alt+Shift+r restart
 
 # exit i3
-bindsym $alt+Shift+q exec "i3-nagbar -t warning -m 'Log out?' -b 'Y' 'i3-msg exit'"
+bindsym $alt+Shift+q exec shutdown now
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
