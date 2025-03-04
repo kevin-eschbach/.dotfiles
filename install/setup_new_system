@@ -18,6 +18,7 @@ sudo apt install remmina -y
 sudo apt install tldr -y
 sudo apt install wikiman -y
 sudo apt install vlc -y
+sudo apt install thunderbird -y
 sudo apt install python3-pip -y
 
 source ./update_go

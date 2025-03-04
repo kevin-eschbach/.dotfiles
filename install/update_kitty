@@ -1,9 +1,6 @@
 #!/usr/bin/env bash
-if [ -d "$HOME/personal/kitty" ]; then
-    echo "kitty already cloned"
-else
-    git clone https://github.com/kovidgoyal/kitty.git $HOME/personal/kitty
-fi
+
+git clone https://github.com/kovidgoyal/kitty.git $HOME/personal/kitty
 
 sudo apt install uuid-dev -y
 sudo apt install libgl1-mesa-dev libglu1-mesa-dev -y

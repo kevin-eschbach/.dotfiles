@@ -1,7 +1,6 @@
 #!/usr/bin/env bash
-if [ -d "$HOME/personal/nvim" ]; then
-    git clone https://github.com/neovim/neovim.git $HOME/personal/neovim
-fi
+
+git clone https://github.com/neovim/neovim.git $HOME/personal/neovim
 
 sudo apt install cmake gettext lua5.1 liblua5.1-0-dev
 
