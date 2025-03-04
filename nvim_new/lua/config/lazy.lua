@@ -22,5 +22,10 @@ require("lazy").setup({
         { import = "plugins" },
         { import = "plugins.lsp" }
     },
-    checker = { enabled = true },
+    checker = {
+        enabled = true,
+        concurrency = nil,
+        notify = false,
+        frequency = 3600
+    },
 })
