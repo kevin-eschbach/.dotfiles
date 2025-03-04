@@ -9,6 +9,7 @@ sudo apt install build-essential -y
 sudo apt install cmake -y
 sudo apt install git -y
 sudo apt install wget -y
+sudo apt install tmux -y
 sudo apt install fzf -y
 sudo apt install curl -y
 sudo apt install ffmpeg -y
