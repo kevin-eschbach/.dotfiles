@@ -18,6 +18,7 @@ local M = {
 			"markdown_inline",
 			"printf",
 			"python",
+            "python3",
 			"query",
 			"regex",
 			"typescript",
