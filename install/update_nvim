@@ -2,7 +2,8 @@
 
 git clone https://github.com/neovim/neovim.git $HOME/personal/neovim
 
-sudo apt install cmake gettext lua5.1 liblua5.1-0-dev
+sudo apt install cmake gettext lua5.1 liblua5.1-0-dev -y
+sudo apt install luarocks -y
 
 cd $HOME/personal/neovim
 git fetch

@@ -8,6 +8,7 @@ sudo apt autoremove --purge -y
 sudo apt install build-essential -y
 sudo apt install cmake -y
 sudo apt install git -y
+sudo apt install net-tools -y
 sudo apt install wget -y
 sudo apt install tmux -y
 sudo apt install fzf -y
@@ -21,11 +22,17 @@ sudo apt install wikiman -y
 sudo apt install vlc -y
 sudo apt install thunderbird -y
 sudo apt install python3-pip -y
+sudo apt install python3-venv -y
+sudo apt install python3-pynvim -y
+sudo apt install npm -y
+sudo apt install ripgrep -y
+sudo apt install fd-find -y
 
 cd $HOME/.dotfiles/install
 source ./update_go
 cd $HOME/.dotfiles/install
 source ./update_kitty
+# TODO: script crashes somewhere here... 
 cd $HOME/.dotfiles/install
 source ./update_nvim
 cd $HOME/.dotfiles/install
@@ -33,6 +40,7 @@ source ./install_i3
 cd $HOME/.dotfiles/install
 source ./update_dotfiles
 cd $HOME/.dotfiles/install
+# TODO: install rust
 
 
 
