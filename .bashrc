@@ -113,3 +113,12 @@ export MANPAGER="nvim +Man!"
 export SDKMAN_DIR="$HOME/.sdkman"
 [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
 . "$HOME/.cargo/env"
+
+if [ -z "$TMUX" ]; then
+    :
+else
+    cdir=$(pwd)
+    if [ -f "$cdir/.tmux-sessionizer" ]; then
+        source $cdir/.tmux-sessionizer
+    fi
+fi
