@@ -34,3 +34,13 @@ vim.keymap.set('n', '<leader>ft', builtin.treesitter, {})
 -- fuzzy find the current file
 vim.keymap.set({'n', 'v'}, '<leader>fz', builtin.current_buffer_fuzzy_find, {})
 
+require('telescope').setup{
+defaults = {
+        layout_config = {
+            horizontal = {
+                preview_cutoff = 0,
+            }
+        }
+    }
+
+}
