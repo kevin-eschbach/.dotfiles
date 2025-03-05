@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+
+xrandr --output DP-1 --auto --left-of eDP-1 --auto
+
+exit 0
