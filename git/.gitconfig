@@ -15,3 +15,10 @@
 [core]
 	autocrlf = false 
 	whitespace = cr-at-eol
+    editor = nvim
+[difftool "nvimdiff"]
+    cmd = "nvim -d \"$LOCAL\" \"$REMOTE\""
+[difftool]
+    prompt = false
+[diff]
+    tool = nvimdiff
