@@ -31,17 +31,20 @@ return {
                 "html",
                 "cssls",
                 "lua_ls",
-                "pyright",
+                "pylsp",
                 "gopls",
             },
         })
 
+
         mason_tool_installer.setup({
+            auto_enable = true,
             ensure_installed = {
                 "prettier", -- prettier formatter
                 "stylua", -- lua formatter
-                "isort", -- python formatter
+--                "isort", -- python formatter
                 "black", -- python formatter
+                "mypy",
                 "pylint",
                 "eslint_d",
             },

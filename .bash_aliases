@@ -44,3 +44,6 @@ alias vi='nvim'
 ## Go Aliases
 alias air='~/go/bin/air'
 
+## Python Aliases
+alias makepy='python3 make.py'
+

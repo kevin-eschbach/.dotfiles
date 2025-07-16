@@ -5,7 +5,6 @@ local M = {
 		indent = { enable = true },
 		ensure_installed = {
 			"bash",
-			"c",
 			"diff",
 			"html",
 			"javascript",
@@ -24,7 +23,6 @@ local M = {
 			"typescript",
 			"vim",
 			"vimdoc",
-			"java"
 		},
 		sync_install = true,
 

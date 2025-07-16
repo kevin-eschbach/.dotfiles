@@ -14,7 +14,12 @@ local builtin = require('telescope.builtin')
 -- finds files in current dir
 vim.keymap.set('n', '<leader>ff', builtin.find_files, {})
 -- search file contents in current dir
-vim.keymap.set('n', '<leader>fg', builtin.live_grep, {})
+-- vim.keymap.set('n', '<leader>fg', builtin.live_grep, {})
+vim.keymap.set('n', '<leader>fg', function()
+    builtin.live_grep({
+        glob_pattern = {'!**/migrations/**'}
+    })
+end)
 -- search buffers
 vim.keymap.set('n', '<leader>b', builtin.buffers, {})
 -- searches help tags for builting methods

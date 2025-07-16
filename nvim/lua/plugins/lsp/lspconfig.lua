@@ -53,6 +53,9 @@ return {
 
                 opts.desc = "Show documentation for what is under cursor"
                 keymap.set("n", "K", vim.lsp.buf.hover, opts)
+
+                opts.desc = "Show workspace symbols"
+                keymap.set("n", "<leader>vws", "<cmd>Telescope lsp_document_symbols<CR>", opts)
             end,
         })
 
@@ -60,43 +63,12 @@ return {
         local capabilities = cmp_nvim_lsp.default_capabilities()
 
         -- Change the Diagnostic symbols
-        local signs = { Error = "E ", Warn = "W ", Hint = "H ", Info = "I " }
-        for type, icon in pairs(signs) do
-            local hl = "DiagnosticSign" .. type
-            vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = "" })
-        end
+        -- local signs = { Error = "E ", Warn = "W ", Hint = "H ", Info = "I " }
+        -- for type, icon in pairs(signs) do
+        --     local hl = "DiagnosticSign" .. type
+        --     vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = "" })
+        -- end
 
-        mason_lspconfig.setup_handlers({
-            -- default handler for installed servers
-            function(server_name)
-                lspconfig[server_name].setup({
-                    capabilities = capabilities,
-                })
-            end,
-            ["emmet_ls"] = function()
-                -- configure emmet language server
-                lspconfig["emmet_ls"].setup({
-                    capabilities = capabilities,
-                    filetypes = { "html", "typescriptreact", "javascriptreact", "css", "sass", "scss", "less"},
-                })
-            end,
-            ["lua_ls"] = function()
-                -- configure lua server (with special settings)
-                lspconfig["lua_ls"].setup({
-                    capabilities = capabilities,
-                    settings = {
-                        Lua = {
-                            -- make the language server recognize "vim" global
-                            diagnostics = {
-                                globals = { "vim" },
-                            },
-                            completion = {
-                                callSnippet = "Replace",
-                            },
-                        },
-                    },
-                })
-            end,
-        })
+        vim.lsp.enable("pylsp")
     end,
 }
