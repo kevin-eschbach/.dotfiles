@@ -1,1 +1,2 @@
 bind -x '"\C-f": tmux_sessionizer'
+bind -x '"\C-b": rofi -lines 12 -padding 18 -width 60 -location 0 -show drun -sidebar-mode -columns 3 -font "Noto DeJaVu Mono 16" -normal-window'

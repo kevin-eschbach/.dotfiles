@@ -93,4 +93,6 @@ else
     fi
 fi
 
-kitten theme "Gruvbox Dark Hard"
+# kitten theme "Gruvbox Dark Hard"
+. "$HOME/.cargo/env"
+source ~/.bash_completion/alacritty
