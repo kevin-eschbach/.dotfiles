@@ -7,6 +7,7 @@ sudo apt install luarocks -y
 
 cd $HOME/personal/neovim
 git fetch
-git checkout v0.11.2
+git checkout v0.11.4
+rm -rf .deps/
 make CMAKE_BUILD_TYPE=RelWithDebInfo
 sudo make install
