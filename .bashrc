@@ -1,5 +1,6 @@
 export DOTFILES="$HOME/.dotfiles"
 source $DOTFILES/exports
+
 # If not running interactively, don't do anything
 case $- in
     *i*) ;;
@@ -49,7 +50,6 @@ mkcd() {
 }
 
 # Common Directories
-export WORKSPACE="$HOME/ws"
 export SCRIPTS="$DOTFILES/scripts"
 
 # Settings
