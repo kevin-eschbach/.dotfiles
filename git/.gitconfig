@@ -4,21 +4,32 @@
     diff = true
     interactive = true
     status = true
+
 [color "status"]
     added = green
     changed = red 
     deleted = red
     untracked = yellow
+
 [user]
-	name = Kevin Eschbach
+	name = kevin-eschbach
 	email = 64735549+kevin-eschbach@users.noreply.github.com
+
 [core]
 	autocrlf = false 
 	whitespace = cr-at-eol
     editor = nvim
+
 [difftool "nvimdiff"]
     cmd = "nvim -d \"$LOCAL\" \"$REMOTE\""
+
 [difftool]
     prompt = false
+
 [diff]
     tool = nvimdiff
+
+[includeIf "gitdir:~/work/"]
+    path = ~/.gitconfig-work
+
+

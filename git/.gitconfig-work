@@ -1,0 +1,7 @@
+[user]
+    name = kevin
+    email = kevin.eschbach@werkbank.de
+    signingkey = 7531C3EEA8D3197C
+
+[commit]
+    gpgsign = True

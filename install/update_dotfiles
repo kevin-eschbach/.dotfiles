@@ -9,6 +9,7 @@ sudo rm -rf $HOME/.bashrc > /dev/null 2>&1
 sudo rm -rf $HOME/.bash_profile > /dev/null 2>&1
 sudo rm -rf $HOME/.bash_aliases > /dev/null 2>&1
 sudo rm -rf $HOME/.gitconfig > /dev/null 2>&1
+sudo rm -rf $HOME/.gitconfig-work > /dev/null 2>&1
 sudo rm -rf $HOME/.config/nvim > /dev/null 2>&1
 sudo rm -rf $HOME/.config/i3 > /dev/null 2>&1
 sudo rm -rf $HOME/.config/polybar > /dev/null 2>&1
@@ -21,6 +22,7 @@ sudo rm -f $HOME/.alacritty.toml 2>&1
 ln -sf $dotfiles_dir/.bashrc $HOME/.bashrc
 ln -sf $dotfiles_dir/nvim $HOME/.config/nvim
 ln -sf $dotfiles_dir/git/.gitconfig $HOME/.gitconfig
+ln -sf $dotfiles_dir/git/.gitconfig-work $HOME/.gitconfig-work
 ln -sf $dotfiles_dir/i3 $HOME/.config/i3
 ln -sf $dotfiles_dir/polybar $HOME/.config/polybar
 ln -sf $dotfiles_dir/tmux/.tmux.conf $HOME/.tmux.conf
