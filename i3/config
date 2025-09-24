@@ -1,0 +1,102 @@
+# set modifier
+set $alt Mod1
+set $home Mod4
+
+# set font
+font pango: Noto DeJaVu Mono 16 
+
+# No Borders
+for_window [class="^.*"] border pixel 1
+                         # class        border  backgr   text    indic  child_brdr
+for_window [class="^.*"] client.focused   #ffffff #ffffff #ffffff #ffffff #ffffff 
+
+# autostart
+exec_always --no-startup-id hsetroot -center ~/Downloads/ak_gandalf.jpg  # set wallpaper
+# exec_always --no-startup-id hsetroot -solid "#252525"
+exec --no-startup-id compton 
+exec_always --no-startup-id ~/.config/polybar/launch.sh
+
+# start a terminal on alt+enter
+bindsym $alt+Return exec alacritty 
+
+# start rofi
+bindsym $alt+d exec rofi -lines 12 -padding 18 -width 60 -location 0 -show drun -sidebar-mode -columns 3 -font 'Noto DeJaVu Mono 16'
+
+# Use Mouse+$alt to drag floating windows to their wanted position
+floating_modifier $alt
+
+# lock screen 
+bindsym $home+l exec i3lock -c 0f0f0f -f
+# kill focused window
+bindsym $alt+q kill
+
+# toggle keyboard layout
+bindsym $alt+t exec (setxkbmap -query | grep -q 'variant:\s\+intl') && setxkbmap -layout us || setxkbmap -layout us -variant intl
+ 
+
+# change focus
+bindsym $alt+h focus left
+bindsym $alt+j focus down
+bindsym $alt+k focus up
+bindsym $alt+l focus right
+
+# move focused window
+bindsym $alt+Shift+h move left
+bindsym $alt+Shift+j move down bindsym $alt+Shift+k move up
+bindsym $alt+Shift+l move right
+
+
+# enter fullscreen mode for the focused container
+bindsym $alt+f fullscreen toggle
+
+# change container layout split
+bindsym $alt+Shift+s layout toggle split
+
+# switch to workspace
+bindsym $alt+1 workspace 1
+bindsym $alt+2 workspace 2
+bindsym $alt+3 workspace 3
+bindsym $alt+4 workspace 4
+bindsym $alt+5 workspace 5
+bindsym $alt+6 workspace 6
+bindsym $alt+7 workspace 7
+bindsym $alt+8 workspace 8
+bindsym $alt+9 workspace 9
+
+# move focused container to workspace
+bindsym $alt+Shift+1 move container to workspace 1
+bindsym $alt+Shift+2 move container to workspace 2
+bindsym $alt+Shift+3 move container to workspace 3
+bindsym $alt+Shift+4 move container to workspace 4
+bindsym $alt+Shift+5 move container to workspace 5
+bindsym $alt+Shift+6 move container to workspace 6
+bindsym $alt+Shift+7 move container to workspace 7
+bindsym $alt+Shift+8 move container to workspace 8
+bindsym $alt+Shift+9 move container to workspace 9
+
+# restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
+bindsym $alt+Shift+r restart
+
+# exit i3
+bindsym $alt+Shift+q exec i3-msg exit 
+
+
+# resize window (you can also use the mouse for that)
+mode "resize" {
+        bindsym h resize shrink width 5 px or 5 ppt
+        bindsym j resize grow height 5 px or 5 ppt
+        bindsym k resize shrink height 5 px or 5 ppt
+        bindsym l resize grow width 5 px or 5 ppt
+        bindsym Return mode "default"
+        bindsym $alt+r mode "default"
+        bindsym Escape mode "default"
+}
+bindsym $alt+r mode "resize"
+
+# colour of border, background, text, indicator, and child_border
+client.focused              #bf616a #2f343f #d8dee8 #bf616a #d8dee8
+client.focused_inactive     #2f343f #2f343f #d8dee8 #2f343f #2f343f
+client.unfocused            #2f343f #2f343f #d8dee8 #2f343f #2f343f
+client.urgent               #2f343f #2f343f #d8dee8 #2f343f #2f343f
+client.placeholder          #2f343f #2f343f #d8dee8 #2f343f #2f343f
+client.background           #2f343f
