@@ -5,13 +5,8 @@ set $home Mod4
 # set font
 font pango: Noto DeJaVu Mono 16 
 
-# No Borders
-for_window [class="^.*"] border pixel 1
-                         # class        border  backgr   text    indic  child_brdr
-for_window [class="^.*"] client.focused   #ffffff #ffffff #ffffff #ffffff #ffffff 
-
 # autostart
-exec_always --no-startup-id hsetroot -center ~/Downloads/ak_gandalf.jpg  # set wallpaper
+exec_always --no-startup-id hsetroot -cover ~/Downloads/114133447_p0.png  # set wallpaper
 # exec_always --no-startup-id hsetroot -solid "#252525"
 exec --no-startup-id compton 
 exec_always --no-startup-id ~/.config/polybar/launch.sh
@@ -42,7 +37,8 @@ bindsym $alt+l focus right
 
 # move focused window
 bindsym $alt+Shift+h move left
-bindsym $alt+Shift+j move down bindsym $alt+Shift+k move up
+bindsym $alt+Shift+j move down
+bindsym $alt+Shift+k move up
 bindsym $alt+Shift+l move right
 
 
@@ -83,20 +79,41 @@ bindsym $alt+Shift+q exec i3-msg exit
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
-        bindsym h resize shrink width 5 px or 5 ppt
-        bindsym j resize grow height 5 px or 5 ppt
-        bindsym k resize shrink height 5 px or 5 ppt
-        bindsym l resize grow width 5 px or 5 ppt
+        bindsym h resize shrink width 4 px or 4 ppt
+        bindsym j resize grow height 4 px or 4 ppt
+        bindsym k resize shrink height 4 px or 4 ppt
+        bindsym l resize grow width 4 px or 4 ppt
         bindsym Return mode "default"
         bindsym $alt+r mode "default"
         bindsym Escape mode "default"
 }
 bindsym $alt+r mode "resize"
 
-# colour of border, background, text, indicator, and child_border
-client.focused              #bf616a #2f343f #d8dee8 #bf616a #d8dee8
-client.focused_inactive     #2f343f #2f343f #d8dee8 #2f343f #2f343f
-client.unfocused            #2f343f #2f343f #d8dee8 #2f343f #2f343f
-client.urgent               #2f343f #2f343f #d8dee8 #2f343f #2f343f
-client.placeholder          #2f343f #2f343f #d8dee8 #2f343f #2f343f
-client.background           #2f343f
+# Borders
+for_window [class="^.*"] border pixel 2
+gaps inner 8
+gaps outer 0
+smart_gaps on
+hide_edge_borders smart_no_gaps
+# colour of                 border  backg   text    ind     child_border
+client.focused              #cc241d #282828 #d79921 #cc241d #cc241d 
+client.focused_inactive     #a89984 #282828 #a89984 #a89984 #a89984
+client.unfocused            #a89984 #282828 #a89984 #a89984 #a89984
+client.urgent               #a89984 #282828 #a89984 #a89984 #a89984
+client.placeholder          #a89984 #282828 #a89984 #a89984 #a89984
+client.background           #a89984
+
+focus_follows_mouse yes
+mouse_warping none
+
+#black   #282828
+#red     #cc241d
+#green   #98971a
+#yellow  #d79921
+#blue    #458588
+#magenta #b16286
+#cyan    #689d6a
+#white   #a89984
+
+
+
