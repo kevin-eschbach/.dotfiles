@@ -21,7 +21,7 @@ bindsym $alt+d exec rofi -lines 12 -padding 18 -width 60 -location 0 -show drun 
 floating_modifier $alt
 
 # lock screen 
-bindsym $home+l exec i3lock -c 0f0f0f -f
+bindsym $home+l exec i3lock -k -n -f -c 282828
 # kill focused window
 bindsym $alt+q kill
 
