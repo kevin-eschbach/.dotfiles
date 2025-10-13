@@ -11,6 +11,17 @@ exec_always --no-startup-id hsetroot -cover ~/Downloads/114133447_p0.png  # set 
 exec --no-startup-id compton 
 exec_always --no-startup-id ~/.config/polybar/launch.sh
 
+exec --no-startup-id i3-msg 'workspace 2; append_layout ~/.dotfiles/i3/workspaces/ws_2.json'
+exec --no-startup-id i3-msg 'workspace 2; exec alacritty'
+exec --no-startup-id i3-msg 'workspace 2; exec firefox'
+
+exec --no-startup-id i3-msg 'workspace 1; append_layout ~/.dotfiles/i3/workspaces/ws_1.json'
+exec --no-startup-id i3-msg 'workspace 1; exec alacritty'
+exec --no-startup-id i3-msg 'workspace 1; exec alacritty'
+exec --no-startup-id i3-msg 'workspace 1; exec alacritty'
+
+
+
 # start a terminal on alt+enter
 bindsym $alt+Return exec alacritty 
 

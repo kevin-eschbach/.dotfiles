@@ -1,0 +1,50 @@
+{
+    // splith split container with 2 children
+    "layout": "splitv",
+    "type": "con",
+    "nodes": [
+        {
+            // splith split container with 2 children
+            "layout": "splith",
+            "type": "con",
+            "percent": 0.85,
+            "nodes": [
+                {
+                    "name": "Alacritty",
+                    "percent": 0.75,
+                    "swallows": [
+                       {
+                       "class": "^Alacritty$",
+                       "instance": "^Alacritty$"
+                       }
+                    ],
+                    "type": "con"
+                },
+                {
+                    "name": "Alacritty",
+                    "percent": 0.25,
+                    "swallows": [
+                       {
+                       "class": "^Alacritty$",
+                       "instance": "^Alacritty$"
+                       }
+                    ],
+                    "type": "con"
+                }
+            ]
+        },
+        {
+            "name": "Alacritty",
+            "percent": 0.15,
+            "swallows": [
+               {
+               "class": "^Alacritty$",
+               "instance": "^Alacritty$"
+               }
+            ],
+            "type": "con"
+        }
+
+    ]
+}
+
