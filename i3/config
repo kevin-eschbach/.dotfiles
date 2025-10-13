@@ -101,16 +101,16 @@ mode "resize" {
 bindsym $alt+r mode "resize"
 
 # Borders
-for_window [class="^.*"] border pixel 2
+for_window [class="^.*"] border pixel 4
 gaps inner 8
 gaps outer 0
 smart_gaps on
 hide_edge_borders smart_no_gaps
 # colour of                 border  backg   text    ind     child_border
-client.focused              #cc241d #282828 #d79921 #cc241d #cc241d 
+client.focused              #a89984 #282828 #a89984 #a89984 #458588 
 client.focused_inactive     #a89984 #282828 #a89984 #a89984 #a89984
 client.unfocused            #a89984 #282828 #a89984 #a89984 #a89984
-client.urgent               #a89984 #282828 #a89984 #a89984 #a89984
+client.urgent               #a89984 #282828 #a89984 #a89984 #cc241d
 client.placeholder          #a89984 #282828 #a89984 #a89984 #a89984
 client.background           #a89984
 
