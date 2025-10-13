@@ -6,7 +6,6 @@ set $home Mod4
 font pango: Noto DeJaVu Mono 16 
 
 # autostart
-exec_always --no-startup-id hsetroot -cover ~/Downloads/114133447_p0.png  # set wallpaper
 # exec_always --no-startup-id hsetroot -solid "#252525"
 exec --no-startup-id compton 
 exec_always --no-startup-id ~/.config/polybar/launch.sh
@@ -113,6 +112,8 @@ client.unfocused            #a89984 #282828 #a89984 #a89984 #a89984
 client.urgent               #a89984 #282828 #a89984 #a89984 #cc241d
 client.placeholder          #a89984 #282828 #a89984 #a89984 #a89984
 client.background           #a89984
+
+exec_always --no-startup-id hsetroot -cover ~/Downloads/114133447_p0.png  # set wallpaper
 
 focus_follows_mouse yes
 mouse_warping none
