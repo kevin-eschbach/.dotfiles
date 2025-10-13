@@ -6,9 +6,7 @@ set $home Mod4
 font pango: Noto DeJaVu Mono 16 
 
 # autostart
-# exec_always --no-startup-id hsetroot -solid "#252525"
 exec --no-startup-id compton 
-exec_always --no-startup-id ~/.config/polybar/launch.sh
 
 exec --no-startup-id i3-msg 'workspace 2; append_layout ~/.dotfiles/i3/workspaces/ws_2.json'
 exec --no-startup-id i3-msg 'workspace 2; exec alacritty'
@@ -18,6 +16,9 @@ exec --no-startup-id i3-msg 'workspace 1; append_layout ~/.dotfiles/i3/workspace
 exec --no-startup-id i3-msg 'workspace 1; exec alacritty'
 exec --no-startup-id i3-msg 'workspace 1; exec alacritty'
 exec --no-startup-id i3-msg 'workspace 1; exec alacritty'
+
+exec_always --no-startup-id sleep 5 && hsetroot -cover ~/Downloads/114133447_p0.png  # set wallpaper
+# exec_always --no-startup-id hsetroot -solid "#252525"
 
 
 
@@ -109,11 +110,10 @@ hide_edge_borders smart_no_gaps
 client.focused              #a89984 #282828 #a89984 #a89984 #458588 
 client.focused_inactive     #a89984 #282828 #a89984 #a89984 #a89984
 client.unfocused            #a89984 #282828 #a89984 #a89984 #a89984
-client.urgent               #a89984 #282828 #a89984 #a89984 #cc241d
+client.urgent               #a89984 #282828 #a89984 #a89984 #a89984
 client.placeholder          #a89984 #282828 #a89984 #a89984 #a89984
 client.background           #a89984
 
-exec_always --no-startup-id hsetroot -cover ~/Downloads/114133447_p0.png  # set wallpaper
 
 focus_follows_mouse yes
 mouse_warping none
@@ -127,5 +127,4 @@ mouse_warping none
 #cyan    #689d6a
 #white   #a89984
 
-
-
+exec_always --no-startup-id ~/.config/polybar/launch.sh 
