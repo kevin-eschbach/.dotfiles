@@ -8,14 +8,15 @@ font pango: Noto DeJaVu Mono 16
 # autostart
 exec --no-startup-id compton 
 
-exec --no-startup-id i3-msg 'workspace 2; append_layout ~/.dotfiles/i3/workspaces/ws_2.json'
-exec --no-startup-id i3-msg 'workspace 2; exec alacritty'
-exec --no-startup-id i3-msg 'workspace 2; exec firefox'
+exec --no-startup-id sh -c 'sleep 5; i3-msg "workspace 1; append_layout ~/.dotfiles/i3/workspaces/ws_1.json"'
+exec --no-startup-id i3-msg 'workspace 1; exec sleep 5 && alacritty'
+exec --no-startup-id i3-msg 'workspace 1; exec sleep 5 && alacritty'
+exec --no-startup-id i3-msg 'workspace 1; exec sleep 5 && alacritty'
 
-exec --no-startup-id i3-msg 'workspace 1; append_layout ~/.dotfiles/i3/workspaces/ws_1.json'
-exec --no-startup-id i3-msg 'workspace 1; exec alacritty'
-exec --no-startup-id i3-msg 'workspace 1; exec alacritty'
-exec --no-startup-id i3-msg 'workspace 1; exec alacritty'
+exec --no-startup-id i3-msg 'workspace 2; append_layout ~/.dotfiles/i3/workspaces/ws_2.json'
+exec --no-startup-id i3-msg 'workspace 2; exec sleep 5 && alacritty'
+exec --no-startup-id i3-msg 'workspace 2; exec sleep 5 && firefox'
+
 
 exec_always --no-startup-id sleep 5 && hsetroot -cover ~/Downloads/114133447_p0.png  # set wallpaper
 # exec_always --no-startup-id hsetroot -solid "#252525"
