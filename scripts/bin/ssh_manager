@@ -1,0 +1,20 @@
+WORK_ROOT=~/work
+
+selected=$(find "$WORK_ROOT" -mindepth 2 -maxdepth 2 -name .tmux-sessionizer -type f -print0 |
+    while IFS=$'\t' read -r -d '' f; do
+        proj=$(basename "$(dirname "$f")")
+        grep -a -Eho '(dev|prod)\s*=\s*["'"'"']?[^"'"'"'[:space:]]+["'"'"']?' "$f" 2>/dev/null |
+            sed -E 's/^([^=]+)=\s*["'"'"']?([^"'"'"']+)["'"'"']?$/\1\t\2/' |
+            while IFS=$'\t' read -r typ url; do
+                printf '%s\t%s\t%s\n' "$proj" "$typ" "$url"
+            done
+    done |
+    fzf --with-nth=1,2,3 \
+        --preview='printf "%s %s -> %s" {1} {2} {3}' \
+        --prompt='Select project · URL › ')
+
+[[ -z "$selected" ]] && { echo "Nothing selected - exiting." >&2; exit 1; }
+
+IFS=$'\t' read -r proj typ url f <<< $selected
+
+exec ssh $url
