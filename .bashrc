@@ -96,3 +96,6 @@ fi
 # kitten theme "Gruvbox Dark Hard"
 . "$HOME/.cargo/env"
 source ~/.bash_completion/alacritty
+
+# spicetify
+export PATH=$PATH:~/.spicetify

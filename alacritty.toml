@@ -1,6 +1,6 @@
 [general]
 import = [
-    "~/personal/alacritty-theme/themes/gruvbox_dark.toml"
+    "~/personal/alacritty-theme/themes/rose_pine.toml"
 ]
 live_config_reload = true
 
