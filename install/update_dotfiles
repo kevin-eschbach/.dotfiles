@@ -29,3 +29,5 @@ ln -sf $dotfiles_dir/tmux/.tmux.conf $HOME/.tmux.conf
 ln -sf $dotfiles_dir/inputrc $HOME/.inputrc
 ln -sf $dotfiles_dir/rofi/config.rasi $HOME/.config/rofi/config.rasi
 ln -sf $dotfiles_dir/alacritty.toml $HOME/.alacritty.toml
+ln -sf $dotfiles_dir/newsboat/urls $HOME/.newsboat/urls
+ln -sf $dotfiles_dir/newsboat/config $HOME/.newsboat/config

@@ -1,0 +1,26 @@
+# Feed Aggregation
+"query:Videos:tags # \"video\""
+"query:Short:tags # \"short\""
+
+# Blogs
+https://xn--gckvb8fzb.com/index.xml blog foss tech programming
+https://www.hamvocke.com/feed-tech.xml blog programming
+
+# News
+https://news.ycombinator.com/rss news tech
+
+# Youtube
+https://www.youtube.com/feeds/videos.xml?playlist_id=UULFUyeluBRhGPCW4rPe_UvBZQ ! youtube video "~ThePrimeTime" programming
+https://www.youtube.com/feeds/videos.xml?playlist_id=UULF8ENHE5xdFSwx71u3fDH5Xw ! youtube video "~ThePrimeagen" programming
+https://www.youtube.com/feeds/videos.xml?playlist_id=UULF_S45UpAYVuc0fYEcHN9BVQ ! youtube video "~BoyBoy"        
+https://www.youtube.com/feeds/videos.xml?playlist_id=UULFsXVk37bltHxD1rDPwtNM8Q ! youtube video "~Kuzgesagt"     
+https://www.youtube.com/feeds/videos.xml?playlist_id=UULFd3dNckv1Za2coSaHGHl5aA ! youtube video "~TejDev" programming
+https://www.youtube.com/feeds/videos.xml?playlist_id=UULF9H0HzpKf5JlazkADWnW1Jw ! youtube video "~bashbunni" foss programming
+https://www.youtube.com/feeds/videos.xml?playlist_id=UULFqVEHtQoXHmUCfJ-9smpTSg ! youtube video "~AnswerInProgress" foss programming
+https://www.youtube.com/feeds/videos.xml?playlist_id=UULF5--wS0Ljbin1TjWQX6eafA ! youtube video "~bigboxSWE" foss programming
+https://www.youtube.com/feeds/videos.xml?playlist_id=UULFsBjURrPoezykLs9EqgamOA ! youtube video "~Fireship" foss programming
+
+# Mastodon
+https://mastodon.social/@bashbunni.rss ! short mastodon
+https://cultur.social/@marcuwekling.rss ! short mastodon
+
