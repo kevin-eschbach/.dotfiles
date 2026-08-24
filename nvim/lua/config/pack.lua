@@ -30,7 +30,10 @@ vim.pack.add({
     gh("mason-org/mason.nvim"),
     gh("neovim/nvim-lspconfig"),
     gh("mason-org/mason-lspconfig.nvim"),
-
+    gh("catgoose/nvim-colorizer.lua"),
+    gh("tpope/vim-fugitive"),
+    gh("nvim-mini/mini.snippets"),
+    gh("rafamadriz/friendly-snippets"),
 
 })
 
@@ -39,7 +42,6 @@ require("nvim-treesitter.configs").setup({
     ensure_installed = {
         "bash",
         "diff",
-        "html",
         "javascript",
         "json",
         "lua",

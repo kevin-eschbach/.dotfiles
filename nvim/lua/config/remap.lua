@@ -8,7 +8,6 @@ vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
 -- replace highlighted
 vim.keymap.set("v", "<C-r>", '"hy:%s/<C-r>h//gc<left><left><left>')
 
-
 local builtin = require('telescope.builtin')
 
 -- finds files in current dir
