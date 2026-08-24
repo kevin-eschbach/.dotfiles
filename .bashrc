@@ -99,3 +99,6 @@ source ~/.bash_completion/alacritty
 
 # spicetify
 export PATH=$PATH:~/.spicetify
+
+# opencode
+export PATH=/home/eshy/.opencode/bin:$PATH
