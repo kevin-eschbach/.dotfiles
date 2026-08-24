@@ -1,4 +1,5 @@
 require("config.set")
 require("config.pack")
+require("config.lsp")
 require("config.remap")
 require("after.color")

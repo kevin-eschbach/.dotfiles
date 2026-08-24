@@ -20,9 +20,18 @@ vim.pack.add({
     gh("nvim-lua/plenary.nvim"),
     gh("nvim-telescope/telescope.nvim"),
     {
+        src = gh("rose-pine/neovim"),
+        name = "rose-pine",
+    },
+    {
         src = gh("nvim-treesitter/nvim-treesitter"),
         version = "master",
     },
+    gh("mason-org/mason.nvim"),
+    gh("neovim/nvim-lspconfig"),
+    gh("mason-org/mason-lspconfig.nvim"),
+
+
 })
 
 require("nvim-treesitter.configs").setup({
@@ -32,33 +41,40 @@ require("nvim-treesitter.configs").setup({
         "diff",
         "html",
         "javascript",
-        "jsdoc",
         "json",
         "lua",
         "luadoc",
-        "luap",
         "markdown",
         "markdown_inline",
         "printf",
         "python",
-        "query",
         "regex",
         "typescript",
         "vim",
         "vimdoc",
     },
     sync_install = true,
-
-    -- Automatically install missing parsers when entering buffer
-    -- Recommendation: set to false if you don't have `tree-sitter` CLI installed locally
     auto_install = true,
-
     highlight = {
         enable = true,
-        -- Setting this to true will run `:h syntax` and tree-sitter at the same time.
-        -- Set this to `true` if you depend on 'syntax' being enabled (like for indentation).
-        -- Using this option may slow down your editor, and you may see some duplicate highlights.
-        -- Instead of true it can also be a list of languages
         additional_vim_regex_highlighting = false,
     }
+})
+
+require("rose-pine").setup({
+    styles = {
+        transparency = true,
+    },
+})
+
+require("mason").setup()
+require("mason-lspconfig").setup({
+    ensure_installed = {
+        "ruff",
+        "ty",
+        "ts_ls",
+        "eslint",
+        "lua_ls",
+    },
+    automatic_enable = true,
 })
