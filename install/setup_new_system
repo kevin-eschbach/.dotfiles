@@ -34,6 +34,8 @@ cd $HOME/.dotfiles/install
 source ./update_kitty
 # TODO: script crashes somewhere here... 
 cd $HOME/.dotfiles/install
+source ./update_tree_sitter
+cd $HOME/.dotfiles/install
 source ./update_nvim
 cd $HOME/.dotfiles/install
 source ./install_i3

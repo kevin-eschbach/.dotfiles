@@ -1,0 +1,6 @@
+Version="0.26.13"
+mkdir -p $HOME/.local/bin
+wget --output-document tree-sitter.gz "https://github.com/tree-sitter/tree-sitter/releases/download/v$Version/tree-sitter-linux-x64.gz"
+gunzip -f tree-sitter.gz
+install -m 755 tree-sitter $HOME/.local/bin/tree-sitter
+rm -f tree-sitter
