@@ -2,6 +2,15 @@ local gh = function(repo)
 	return "https://github.com/" .. repo
 end
 
+local lsp_servers = {
+	"ruff",
+	"ty",
+	"ts_ls",
+	"eslint",
+	"lua_ls",
+	"tailwindcss",
+}
+
 local treesitter_languages = {
 	"bash",
 	"css",
@@ -70,14 +79,25 @@ require("lazydev").setup({
 	},
 })
 require("mason-lspconfig").setup({
-	ensure_installed = {
-		"ruff",
-		"ty",
-		"ts_ls",
-		"eslint",
-		"lua_ls",
+	ensure_installed = lsp_servers,
+	-- Only enable the servers listed above; Mason may hold other installed
+	-- packages that should not attach as language servers.
+	automatic_enable = lsp_servers,
+})
+
+-- nvim-lspconfig copies tailwindcss' filetypes from tailwindcss-intellisense,
+-- so the list carries VS Code language IDs that are not Neovim filetypes.
+-- Narrow it to the ones actually used here.
+vim.lsp.config("tailwindcss", {
+	filetypes = {
+		"css",
+		"html",
+		"htmldjango",
+		"javascript",
+		"javascriptreact",
+		"typescript",
+		"typescriptreact",
 	},
-	automatic_enable = true,
 })
 
 require("nvim-treesitter").setup()
