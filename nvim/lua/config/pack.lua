@@ -46,8 +46,7 @@ vim.api.nvim_create_autocmd("PackChanged", {
 })
 
 vim.pack.add({
-	gh("nvim-lua/plenary.nvim"),
-	gh("nvim-telescope/telescope.nvim"),
+	gh("ibhagwan/fzf-lua"),
 	{
 		src = gh("rose-pine/neovim"),
 		name = "rose-pine",

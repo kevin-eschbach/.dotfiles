@@ -16,10 +16,6 @@ require("conform").setup({
 			prepend_args = { "--profile", "django" },
 		},
 	},
-	format_on_save = {
-		timeout_ms = 1000,
-		lsp_format = "fallback",
-	},
 })
 
 vim.keymap.set({ "n", "v" }, "<leader>vf", function()

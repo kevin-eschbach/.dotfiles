@@ -28,7 +28,7 @@ vim.api.nvim_create_autocmd("LspAttach", {
 		vim.keymap.set(
 			"n",
 			"gd",
-			"<cmd>Telescope lsp_definitions<CR>",
+			"<cmd>FzfLua lsp_definitions<CR>",
 			vim.tbl_extend("force", opts, {
 				desc = "Show LSP definitions",
 			})
@@ -36,7 +36,7 @@ vim.api.nvim_create_autocmd("LspAttach", {
 		vim.keymap.set(
 			"n",
 			"gt",
-			"<cmd>Telescope lsp_type_definitions<CR>",
+			"<cmd>FzfLua lsp_typedefs<CR>",
 			vim.tbl_extend("force", opts, {
 				desc = "Show LSP type definitions",
 			})
@@ -60,7 +60,7 @@ vim.api.nvim_create_autocmd("LspAttach", {
 		vim.keymap.set(
 			"n",
 			"<leader>fd",
-			"<cmd>Telescope diagnostics bufnr=0<CR>",
+			"<cmd>FzfLua diagnostics_document<CR>",
 			vim.tbl_extend("force", opts, {
 				desc = "Show buffer diagnostics",
 			})
@@ -82,7 +82,7 @@ vim.api.nvim_create_autocmd("LspAttach", {
 		vim.keymap.set(
 			"n",
 			"<leader>vws",
-			"<cmd>Telescope lsp_document_symbols<CR>",
+			"<cmd>FzfLua lsp_document_symbols<CR>",
 			vim.tbl_extend("force", opts, {
 				desc = "Show document symbols",
 			})
